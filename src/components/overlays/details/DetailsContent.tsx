@@ -170,7 +170,7 @@ export function DetailsContent({ data, minimal = false }: DetailsContentProps) {
     if (/iPad|iPhone|iPod/i.test(navigator.userAgent) && navigator.share) {
       navigator
         .share({
-          title: "P-Stream",
+          title: "P-Cinevo",
           text: data.title,
           url: shareUrl,
         })

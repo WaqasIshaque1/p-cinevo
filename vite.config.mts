@@ -67,8 +67,8 @@ export default defineConfig(({ mode }) => {
           "safari-pinned-tab.svg",
         ],
         manifest: {
-          name: "P-Stream",
-          short_name: "P-Stream",
+          name: "P-Cinevo",
+          short_name: "P-Cinevo",
           description: "Watch your favorite shows and movies for free with no ads ever! (っ'ヮ'c)",
           theme_color: "#000000",
           background_color: "#000000",

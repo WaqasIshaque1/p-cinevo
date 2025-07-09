@@ -10,6 +10,11 @@ const availableThemes = [
   {
     id: "default",
     selector: "theme-default",
+    key: "settings.appearance.themes.pink",
+  },
+  {
+    id: "monochrom",
+    selector: "theme-monochrom",
     key: "settings.appearance.themes.default",
   },
   {
