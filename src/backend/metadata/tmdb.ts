@@ -202,7 +202,7 @@ export async function get<T>(url: string, params?: object): Promise<T> {
   if (proxy && shouldProxyTmdb) {
     try {
       return await mwFetch<T>(
-        `/?destination=${encodeURIComponent(fullUrl.toString())}`,
+        `/?url=${encodeURIComponent(fullUrl.toString())}`,
         {
           headers: tmdbHeaders,
           baseURL: proxy,
@@ -320,7 +320,7 @@ export function getMediaBackdrop(
   const imgUrl = `https://image.tmdb.org/t/p/original${backdropPath}`;
   const proxyUrl = getProxyUrls()[0];
   if (proxyUrl && shouldProxyTmdb) {
-    return `${proxyUrl}/?destination=${imgUrl}`;
+    return `${proxyUrl}/?url=${imgUrl}`;
   }
   if (backdropPath) return imgUrl;
 }
@@ -333,7 +333,7 @@ export function getMediaPoster(posterPath: string | null): string | undefined {
     const proxyUrls = getProxyUrls();
     const proxy = getNextProxy(proxyUrls);
     if (proxy) {
-      return `${proxy}/?destination=${imgUrl}`;
+      return `${proxy}/?url=${imgUrl}`;
     }
   }
 
@@ -467,7 +467,7 @@ export function getPersonProfileImage(
     const proxyUrls = getProxyUrls();
     const proxy = getNextProxy(proxyUrls);
     if (proxy) {
-      return `${proxy}/?destination=${imgUrl}`;
+      return `${proxy}/?url=${imgUrl}`;
     }
   }
 
