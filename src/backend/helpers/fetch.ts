@@ -62,7 +62,7 @@ export async function singularProxiedFetch<T>(
     ...ops,
     baseURL: undefined,
     params: {
-      destination: parsedUrl.toString(),
+      url: parsedUrl.toString(),
     },
     query: {},
     headers,
